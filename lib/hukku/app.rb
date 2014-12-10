@@ -1,5 +1,6 @@
 # coding: utf-8
 require "sinatra/base"
+require "json/pure"
 
 module Hukku
   class App < Sinatra::Base
@@ -21,5 +22,9 @@ module Hukku
       load_settings
     end
 
+    post "/sfjp" do
+      webhook = JSON.parse params["payload"]
+      "i've received webhook!"
+    end
   end
 end

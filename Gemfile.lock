@@ -2,11 +2,13 @@ PATH
   remote: .
   specs:
     hukku (0.0.1)
+      json
       sinatra
 
 GEM
   remote: https://rubygems.org/
   specs:
+    json (1.8.1)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
