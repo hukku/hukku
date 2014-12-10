@@ -1,0 +1,19 @@
+KWARTZ     = ENV['KWARTZ'] || "kwartz"
+
+VIEWS_DIR  = ENV['VIEWS_DIR'] || "."
+HTML_DIR   = File.join("..","public")
+PLOGIC_DIR = "."
+TARGET     = []
+
+task :default => [TARGET].flatten.map{|t| File.join(VIEWS_DIR,t)}
+
+F = File
+
+task :clean do |task|
+  TARGET.each {|file| rm_f file}
+end
+
+rule ".erb" => [F.join(PLOGIC_DIR,"%n.plogic"), F.join(HTML_DIR,"%n.html")] do |task|
+  prereq = task.prerequisites
+  sh "#{KWARTZ} -p #{prereq[0]} #{prereq[1]} > #{task}"
+end

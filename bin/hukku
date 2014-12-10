@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+# coding: utf-8
+
+require "hukku/cli"
+
+Hukku::CLI.start
