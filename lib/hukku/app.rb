@@ -1,11 +1,16 @@
 # coding: utf-8
 require "sinatra/base"
+require "sinatra/config_file"
 require "json/pure"
 
 module Hukku
   class App < Sinatra::Base
 
+    register Sinatra::ConfigFile
     F = File
+
+    config_file "config.yml"
+    config_file "repo.yml"
 
     set :app_dir, F.expand_path(F.join(F.dirname(__FILE__),"..","..","app"))
 

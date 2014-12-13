@@ -19,6 +19,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "sinatra"
+  spec.add_dependency "sinatra-contrib"
+  spec.add_dependency "systemu"
   spec.add_dependency "json"
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "thor"
