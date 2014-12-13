@@ -28,7 +28,11 @@ module Hukku
     end
 
     post "/sfjp" do
+      halt 500 unless params["payload"]
+
       webhook = JSON.parse params["payload"]
+      halt 500 unless webhook["repository"] && webhook["repository"]["name"]
+
       "i've received webhook!"
     end
   end
