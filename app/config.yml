@@ -1,7 +1,7 @@
-development:
-    mirror_cmd: bin/mirror_repo.sh
-production:
-    mirror_cmd: bin/mirror_repo.sh
-test:
-    mirror_cmd: bin/mirror_repo_test.sh
-
+mirror_cmd:
+    development:
+        bin/mirror_repo.sh
+    production:
+        bin/mirror_repo.sh
+    test:
+        bin/mirror_repo_test.sh

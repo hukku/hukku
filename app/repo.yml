@@ -1,2 +1,3 @@
-tmdmaker: /home/groups/t/tm/tmdmaker/git/tmdmaker.git
-hukku:    /home/groups/t/tm/tmdmaker/git/hukku.git
+repo:
+    tmdmaker: /home/groups/t/tm/tmdmaker/git/tmdmaker.git
+    hukku:    /home/groups/t/tm/tmdmaker/git/hukku.git

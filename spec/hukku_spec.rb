@@ -29,4 +29,9 @@ describe 'The Hukku App' do
     post '/sfjp', "payload" => '{"invalid":"content"}'
     expect(last_response).not_to be_ok
   end
+
+  it "error when invalid repository name" do
+    post '/sfjp', "payload" => '{"repository":{"name":"hogehoge"}}'
+    expect(last_response).not_to be_ok
+  end
 end
