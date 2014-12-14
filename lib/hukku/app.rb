@@ -14,6 +14,8 @@ module Hukku
     set :gem_dir, F.expand_path(F.join(F.dirname(__FILE__),"..",".."))
 
     def self.load_settings
+      config_file "config.yml"
+      config_file "repo.yml"
     end
 
     def self.work_dir=(value)
@@ -25,9 +27,6 @@ module Hukku
       set :root, app_dir
       load_settings
     end
-
-    config_file "config.yml"
-    config_file "repo.yml"
 
     post "/sfjp" do
       halt 500 unless params["payload"]
