@@ -28,6 +28,10 @@ module Hukku
       load_settings
     end
 
+    get "/" do
+      "<html></html>"
+    end
+
     post "/sfjp" do
       halt 500 unless params["payload"]
 
