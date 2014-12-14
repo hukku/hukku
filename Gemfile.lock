@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    hukku (0.0.1)
+    hukku (0.0.2)
       json
       sinatra
       sinatra-contrib
